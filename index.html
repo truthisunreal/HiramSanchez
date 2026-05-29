@@ -1,14 +1,1503 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hiram Sanchez - IT Professional Portfolio Website</title>
-    <script type="module" crossorigin src="./assets/index.Xr6T1ude.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index.CLMHiseR.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hiram Sanchez — Senior Business Analyst & POS Systems Specialist</title>
+<meta name="description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development. Based in Hialeah, Florida." />
+<meta name="author" content="Hiram Sanchez" />
+<meta name="theme-color" content="#F7F2E8" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
+<meta property="og:description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development." />
+<meta property="og:image" content="./og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
+<meta property="profile:first_name" content="Hiram" />
+<meta property="profile:last_name" content="Sanchez" />
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
+<meta name="twitter:description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development." />
+<meta name="twitter:image" content="./og-image.png" />
+
+<!-- Structured data: Person schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hiram Sanchez",
+  "jobTitle": "Senior Business Analyst & POS Systems Specialist",
+  "description": "Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development.",
+  "email": "hiram.sanchez.it@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hialeah",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "knowsLanguage": ["en", "es"],
+  "knowsAbout": [
+    "Point of Sale Systems",
+    "Oracle Xstore",
+    "SQL Server",
+    "ASP.NET",
+    "Retail Technology",
+    "AI-Assisted Development",
+    "Business Systems Analysis"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/hiram-sanchez",
+    "https://www.youtube.com/@littletechlab"
+  ]
+}
+</script>
+
+<!-- Favicon: inline SVG with HS monogram -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E1B2A'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='500' text-anchor='middle' fill='%23B26A2C'>HS</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --cream:        #F7F2E8;
+    --paper:        #FCF7EC;
+    --paper-warm:   #F2EBDB;
+    --ink:          #0E1B2A;
+    --ink-soft:     #1F2F45;
+    --gray:         #54637A;
+    --gray-soft:    #8C9AAE;
+    --rule:         #DDD3BF;
+    --accent:       #B26A2C;
+    --accent-soft:  #D4A574;
+    --accent-bg:    #F4E6D4;
+
+    --display: "Fraunces", "Times New Roman", serif;
+    --body:    "DM Sans", system-ui, sans-serif;
+    --mono:    "JetBrains Mono", "Menlo", monospace;
+  }
+
+  /* ---------- Reset & base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--cream);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* very faint paper grain via radial dots */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(circle at 25% 30%, rgba(139, 109, 64, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 75% 70%, rgba(139, 109, 64, 0.03) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--cream);
+  }
+
+  /* ---------- Layout ---------- */
+  .container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  section { padding: 96px 0; position: relative; z-index: 1; }
+  @media (max-width: 720px) { section { padding: 64px 0; } }
+
+  /* ---------- Typography ---------- */
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .display-xl {
+    font-family: var(--display);
+    font-size: clamp(56px, 9vw, 128px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+  .display-xl em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+
+  .display-lg {
+    font-family: var(--display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+
+  .display-md {
+    font-family: var(--display);
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gray);
+  }
+
+  .lead {
+    font-family: var(--display);
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    letter-spacing: -0.01em;
+  }
+
+  p { margin: 0 0 1em; color: var(--ink-soft); }
+  p.muted { color: var(--gray); }
+  strong { font-weight: 600; color: var(--ink); }
+  em { font-style: italic; }
+
+  /* ---------- Section header pattern ---------- */
+  .section-head {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: baseline;
+  }
+  .section-head .meta { padding-top: 8px; }
+  .section-head .section-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .section-head .section-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 36px; }
+  }
+
+  /* ---------- Decorative mark ---------- */
+  .mark {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border: 1px solid var(--accent);
+    transform: rotate(45deg);
+    margin: 0 8px;
+    vertical-align: middle;
+    background: transparent;
+  }
+
+  /* ---------- Nav ---------- */
+  nav.topnav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(247, 242, 232, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  nav.topnav.scrolled { border-bottom-color: var(--rule); }
+  nav.topnav .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.topnav .brand {
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  nav.topnav .brand em { color: var(--accent); font-style: italic; font-weight: 400; }
+  nav.topnav ul {
+    display: flex; gap: 28px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  nav.topnav ul a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: color 0.2s;
+    position: relative;
+  }
+  nav.topnav ul a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    nav.topnav ul { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  .hero .name { margin-bottom: 32px; }
+  .hero .role-line {
+    font-family: var(--display);
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 400;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+  .hero .tagline {
+    font-family: var(--body);
+    font-size: clamp(17px, 1.8vw, 19px);
+    line-height: 1.55;
+    color: var(--gray);
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+  .hero .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .hero .meta-row .dot {
+    width: 4px; height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .hero .meta-row a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+    padding-bottom: 2px;
+  }
+  .hero .meta-row a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ---------- Stats ---------- */
+  .stats {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 56px 0;
+    background: var(--paper);
+  }
+  .stats .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+  .stats .stat {
+    border-left: 1px solid var(--rule);
+    padding-left: 20px;
+  }
+  .stats .stat:first-child { border-left: none; padding-left: 0; }
+  .stats .num {
+    font-family: var(--display);
+    font-size: clamp(36px, 4.4vw, 56px);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+  .stats .num .small { font-size: 0.5em; color: var(--accent); vertical-align: super; }
+  .stats .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+  }
+  @media (max-width: 880px) {
+    .stats .row { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+    .stats .stat:nth-child(odd) { border-left: none; padding-left: 0; }
+  }
+
+  /* ---------- About ---------- */
+  .about-body {
+    max-width: 720px;
+  }
+  .about-body p {
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 1.2em;
+  }
+  .about-body .first-line::first-line {
+    font-family: var(--display);
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* ---------- Experience ---------- */
+  .job {
+    padding: 40px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .job:first-of-type { border-top: none; padding-top: 0; }
+  .job-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+  .job-dates {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .job-title-block .role {
+    font-family: var(--display);
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 500;
+    margin-bottom: 4px;
+    letter-spacing: -0.015em;
+  }
+  .job-title-block .org {
+    font-family: var(--body);
+    font-size: 16px;
+    color: var(--gray);
+  }
+  .job-title-block .org .side-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-left: 12px;
+    padding: 3px 8px;
+    border: 1px solid var(--accent-soft);
+    border-radius: 2px;
+    vertical-align: 2px;
+  }
+  .job-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 248px;
+    display: grid;
+    gap: 14px;
+  }
+  .job-bullets li {
+    position: relative;
+    padding-left: 24px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .job-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.55em;
+    width: 6px; height: 1px;
+    background: var(--accent);
+  }
+  .job-bullets li strong { color: var(--ink); }
+  @media (max-width: 720px) {
+    .job-header { grid-template-columns: 1fr; gap: 8px; }
+    .job-bullets { margin-left: 0; }
+  }
+
+  /* ---------- Projects ---------- */
+  .project-feature {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 48px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: start;
+    position: relative;
+  }
+  .project-feature::before {
+    content: "★ FEATURED";
+    position: absolute;
+    top: 24px; right: 32px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+  }
+  .project-feature .meta-side .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .project-feature .meta-side .number {
+    font-family: var(--display);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+  }
+  .project-feature .meta-side .sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+  }
+  .project-feature h3 {
+    font-size: clamp(28px, 3vw, 36px);
+    margin-bottom: 16px;
+  }
+  .project-feature p {
+    color: var(--ink-soft);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .project-feature .tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .project-feature .tags span {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray);
+    background: var(--paper-warm);
+    padding: 5px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 720px) {
+    .project-feature { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; }
+    .project-feature::before { position: static; display: block; margin-bottom: 16px; }
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) { .project-grid { grid-template-columns: 1fr; } }
+  .project-card {
+    background: var(--paper);
+    padding: 32px;
+    transition: background-color 0.3s;
+  }
+  .project-card:hover { background: var(--paper-warm); }
+  .project-card .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    margin-bottom: 16px;
+  }
+  .project-card h4 {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.015em;
+  }
+  .project-card p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ---------- Capabilities ---------- */
+  .caps {
+    background: var(--paper);
+    padding: 80px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .caps .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 56px;
+  }
+  @media (max-width: 880px) { .caps .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .caps .grid { grid-template-columns: 1fr; } }
+  .cap-block .cap-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cap-block .cap-items {
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ---------- Elsewhere card ---------- */
+  .elsewhere {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 720px) { .elsewhere { grid-template-columns: 1fr; } }
+  .elsewhere-card {
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .elsewhere-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -16px rgba(14, 27, 42, 0.18);
+  }
+  .elsewhere-card .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 16px;
+  }
+  .elsewhere-card h4 {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.015em;
+  }
+  .elsewhere-card p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .elsewhere-card .link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .elsewhere-card .link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .elsewhere-card .link .arrow { display: inline-block; transition: transform 0.3s; margin-left: 4px; }
+  .elsewhere-card:hover .link .arrow { transform: translateX(4px); }
+
+  /* ---------- Education & Languages ---------- */
+  .extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding-top: 48px;
+    margin-top: 48px;
+    border-top: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) { .extras { grid-template-columns: 1fr; gap: 32px; } }
+  .extras .ex-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 16px;
+  }
+  .extras .ex-content {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+  }
+  .extras .ex-sub {
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 6px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 96px 0;
+    position: relative;
+  }
+  .contact .container { z-index: 2; }
+  .contact .eyebrow { color: var(--accent-soft); }
+  .contact h2 {
+    color: var(--cream);
+    font-family: var(--display);
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 24px 0 40px;
+  }
+  .contact h2 em { color: var(--accent-soft); font-style: italic; font-weight: 300; }
+  .contact .lead { color: rgba(247, 242, 232, 0.75); max-width: 600px; margin-bottom: 56px; }
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  @media (max-width: 720px) { .contact-links { grid-template-columns: 1fr; gap: 28px; } }
+  .contact-links .item .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 10px;
+  }
+  .contact-links .item a {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--cream);
+    letter-spacing: -0.015em;
+    border-bottom: 1px solid rgba(247, 242, 232, 0.2);
+    padding-bottom: 4px;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+    word-break: break-word;
+  }
+  .contact-links .item a:hover {
+    color: var(--accent-soft);
+    border-bottom-color: var(--accent-soft);
+  }
+
+  /* ---------- Footer ---------- */
+  footer.foot {
+    background: var(--ink);
+    color: rgba(247, 242, 232, 0.5);
+    padding: 32px 0;
+    border-top: 1px solid rgba(247, 242, 232, 0.1);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+  footer.foot .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 540px) {
+    footer.foot .inner { flex-direction: column; gap: 10px; }
+  }
+
+  /* ---------- Reveal animations ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.6, 0.2, 1),
+                transform 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: 0.0s; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.08s; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.16s; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 0.24s; }
+  .reveal-stagger.in > *:nth-child(5) { transition-delay: 0.32s; }
+  .reveal-stagger.in > *:nth-child(6) { transition-delay: 0.40s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    .reveal, .reveal-stagger > * { opacity: 1; transform: none; }
+  }
+
+  /* ---------- Platform deep dive ---------- */
+  .platform-section {
+    background:
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-warm) 100%);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .platform-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+  @media (max-width: 880px) { .platform-intro { grid-template-columns: 1fr; gap: 32px; } }
+  .platform-intro .narrative p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 1.1em;
+  }
+  .platform-intro .narrative p:first-of-type::first-line {
+    font-family: var(--display);
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .platform-intro .impact-card {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 32px;
+    position: relative;
+  }
+  .platform-intro .impact-card::before {
+    content: "PLATFORM IMPACT";
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent-soft);
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .platform-intro .impact-card .impact-num {
+    font-family: var(--display);
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--accent-soft);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+  .platform-intro .impact-card .impact-label {
+    font-family: var(--body);
+    font-size: 14px;
+    color: rgba(247, 242, 232, 0.7);
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+  .platform-intro .impact-card .impact-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid rgba(247, 242, 232, 0.12);
+    font-size: 13px;
+  }
+  .platform-intro .impact-card .impact-row .k {
+    font-family: var(--mono);
+    color: rgba(247, 242, 232, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+  }
+  .platform-intro .impact-card .impact-row .v { color: var(--cream); }
+
+  .platform-cats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 880px) { .platform-cats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .platform-cats { grid-template-columns: 1fr; } }
+  .platform-card {
+    background: var(--paper);
+    padding: 28px 28px 32px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  .platform-card:hover { background: var(--paper-warm); }
+  .platform-card .cat-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    margin-bottom: 16px;
+  }
+  .platform-card h4 {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: -0.015em;
+  }
+  .platform-card .cat-desc {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .platform-card .examples {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    padding-top: 12px;
+    border-top: 1px dashed var(--rule);
+  }
+  .platform-card .examples .ex-label {
+    color: var(--gray-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ---------- Currently section ---------- */
+  .currently-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 720px) { .currently-grid { grid-template-columns: 1fr; } }
+  .currently-card {
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 28px;
+    position: relative;
+  }
+  .currently-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 32px;
+    background: var(--accent);
+  }
+  .currently-card .verb {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  .currently-card .what {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    margin-bottom: 8px;
+  }
+  .currently-card .detail {
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+  .currently-stamp {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-top: 24px;
+    display: block;
+  }
+
+  @media print {
+    @page { margin: 0.6in; }
+    body { background: white !important; color: black; font-size: 11pt; }
+    body::before { display: none !important; }
+    nav.topnav, .contact, footer.foot, .elsewhere-card .link .arrow,
+    .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; }
+    nav.topnav { display: none; }
+    section { padding: 16pt 0; page-break-inside: avoid; }
+    .hero { min-height: auto; padding: 0 0 20pt; }
+    .display-xl { font-size: 36pt; }
+    .display-lg { font-size: 22pt; }
+    .lead { font-size: 13pt; }
+    .stats { background: white; border: 1pt solid #888; padding: 12pt 0; }
+    .stats .num { font-size: 22pt; }
+    .caps { background: white; border-top: 1pt solid #ccc; border-bottom: 1pt solid #ccc; padding: 20pt 0; }
+    .project-feature, .elsewhere-card, .project-card, .platform-card {
+      background: white !important;
+      border: 1pt solid #ccc !important;
+      page-break-inside: avoid;
+    }
+    a { color: black; text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="#"]:after, a[href^="mailto:"]:after { content: ""; }
+    .meta-row a { text-decoration: none; }
+    .contact, footer.foot { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <div class="inner">
+    <a class="brand" href="#top">Hiram<em>·</em>Sanchez</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="top">
+  <div class="container">
+    <span class="eyebrow reveal">Hialeah, Florida · Available for new roles</span>
+    <h1 class="display-xl name reveal">Hiram <em>Sanchez</em></h1>
+    <div class="role-line reveal">Senior Business Analyst &nbsp;<span class="mark"></span>&nbsp; POS Systems Specialist</div>
+    <p class="tagline reveal">
+      Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and the in-store software that keeps a 400-register operation running. Lately, leaning hard into AI-assisted development.
+    </p>
+    <div class="meta-row reveal">
+      <span><span class="dot"></span>18+ years experience</span>
+      <a href="mailto:hiram.sanchez.it@gmail.com">hiram.sanchez.it@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="./Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      <a href="./Hiram-Sanchez.vcf" download>Save Contact ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STATS ==================== -->
+<section class="stats" style="padding: 0;">
+  <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+    <div class="row reveal-stagger">
+      <div class="stat">
+        <div class="num" data-count="18" data-suffix="+"><span class="count">18</span><span class="small">+</span></div>
+        <div class="label">Years in retail tech</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="400" data-suffix="+"><span class="count">400</span><span class="small">+</span></div>
+        <div class="label">POS registers managed</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="200" data-suffix="+"><span class="count">200</span><span class="small">+</span></div>
+        <div class="label">SQL servers</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="30" data-suffix="+"><span class="count">30</span><span class="small">+</span></div>
+        <div class="label">In-store apps shipped</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="5000" data-format="k"><span class="count">~5K</span></div>
+        <div class="label">Business rules governed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 01</span>
+        <span class="section-label">About</span>
+      </div>
+      <h2 class="display-lg">The work behind the work.</h2>
+    </div>
+    <div class="about-body reveal">
+      <p class="first-line">
+        I work at the intersection of <strong>point-of-sale systems</strong>, <strong>SQL Server engineering</strong>, and the day-to-day technical glue that keeps an enterprise retail operation running. For the last eighteen years that's been at <strong>Duty Free Americas</strong>, where I'm the gatekeeper for POS change control and business-rule governance across 400+ registers and 200+ SQL servers running Oracle Xstore.
+      </p>
+      <p>
+        I'm probably most proud of <strong>POS Plus Platform</strong> — a suite of 30+ custom in-store applications I built and maintain, running 24/7 across all locations to extend Xstore functionality where the platform stops. Beyond that, my day looks like SQL schema work, ASP.NET application development, ERP integrations with Oracle Retek Resa and SIM, BI/SSRS reporting, and the occasional payment-hardware integration.
+      </p>
+      <p>
+        Lately I've leaned hard into <strong>AI-assisted development</strong> — Claude, GitHub Copilot, ChatGPT, Gemini, and Ollama for local models. The honest version of that story isn't "AI replaces engineers"; it's that I can now ship internal tools, automate documentation, and shorten time-to-resolution on complex incidents at a rate that wasn't possible two years ago.
+      </p>
+      <p class="muted">
+        I'm a calm problem-solver who likes owning things end-to-end — from debugging a register at the script level to architecting a new integration. Bilingual (English / Spanish). Based in Hialeah.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EXPERIENCE ==================== -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 02</span>
+        <span class="section-label">Experience</span>
+      </div>
+      <h2 class="display-lg">Where I've been operating.</h2>
+    </div>
+
+    <div class="job reveal">
+      <div class="job-header">
+        <div class="job-dates">Feb 2008 — Present</div>
+        <div class="job-title-block">
+          <div class="role">Senior Business Analyst &amp; POS Systems Lead</div>
+          <div class="org">Duty Free Americas · Hollywood, FL</div>
+        </div>
+      </div>
+      <ul class="job-bullets">
+        <li><strong>Own POS change control</strong> and business rules across 400+ registers and 200+ SQL servers — including a rule database of ~5,000 covering promotions, discounts, tenders, and store behaviors.</li>
+        <li><strong>Architect of POS Plus Platform</strong> — a suite of 30+ custom applications running 24/7 across all retail locations, extending Xstore functionality where the platform stops short.</li>
+        <li>Implemented and maintain <strong>Oracle Xstore, Xcenter, and Xoffice</strong>, integrated with ERP systems (Oracle Retek Resa, SIM) for accurate end-to-end transaction flow.</li>
+        <li>Designed and maintain SQL Server schemas across 200+ store servers — table design, stored procedures, performance tuning, and data-integrity controls.</li>
+        <li>Built ASP.NET enterprise applications: full employee management, A/R customer management with KYC, and store-attribute integration (taxes, receipt header/footer customization) — all generating flat-file outputs for store deployment.</li>
+        <li>Delivered enterprise initiatives: <strong>PCI compliance, EMV / contactless certifications, Dynamic Currency Conversion, loyalty integration, first-gen tablet POS, and customer self-checkout</strong>.</li>
+        <li>Primary Tier-2 escalation point for complex POS, network, and database incidents; authors SOPs, documentation, and training materials.</li>
+      </ul>
+    </div>
+
+    <div class="job reveal">
+      <div class="job-header">
+        <div class="job-dates">2023 — Present</div>
+        <div class="job-title-block">
+          <div class="role">Founder &amp; Operator <span class="side-tag">Side Venture</span></div>
+          <div class="org">Independent E-commerce Business</div>
+        </div>
+      </div>
+      <ul class="job-bullets">
+        <li>Operate a <strong>Shopify storefront</strong> with <strong>Printify</strong> integration for end-to-end print-on-demand fulfillment — theme customization (Horizon), product catalog, and order operations.</li>
+        <li>Built custom internal tools to streamline content ops: a Metricool-compatible CSV export for multi-platform video scheduling, a brand-voice-driven social post generator across five platforms, and a Shopify-aware post generator.</li>
+        <li>Manage multi-platform social media (Facebook, Instagram, TikTok, YouTube, Pinterest) via Metricool, Postiz, and Post Studio.</li>
+        <li>Produce graphics, product art, and promotional content with <strong>Adobe Photoshop / Illustrator</strong>, <strong>Canva</strong>, and <strong>Leonardo.ai</strong>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== POS PLUS PLATFORM (DEEP DIVE) ==================== -->
+<section class="platform-section" id="platform">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 03</span>
+        <span class="section-label">Platform Deep Dive</span>
+      </div>
+      <h2 class="display-lg">POS Plus Platform.</h2>
+    </div>
+
+    <div class="platform-intro">
+      <div class="narrative reveal">
+        <p>
+          POS Plus Platform is the suite of <strong>30+ custom in-store applications</strong> I architected and have maintained for years, running 24/7 across every Duty Free Americas retail location. It exists because off-the-shelf POS — even something as substantial as Oracle Xstore — can't anticipate every operational reality.
+        </p>
+        <p>
+          When the platform falls short of what stores actually need, I build the piece that closes the gap. Then I keep it running.
+        </p>
+        <p style="color: var(--gray); font-size: 15px;">
+          The result is a layered ecosystem that sits next to Xstore — extending its functionality, monitoring its health, automating its housekeeping, and giving store associates and IT the tools off-the-shelf software didn't ship with.
+        </p>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">30<span style="font-size: 0.45em;">+</span></div>
+        <div class="impact-label">Production applications running 24/7 across every retail location.</div>
+        <div class="impact-row">
+          <span class="k">Coverage</span>
+          <span class="v">All stores · 400+ registers</span>
+        </div>
+        <div class="impact-row">
+          <span class="k">Uptime</span>
+          <span class="v">24/7 production</span>
+        </div>
+        <div class="impact-row">
+          <span class="k">Stack</span>
+          <span class="v">.NET · C# / VB.NET · SQL Server</span>
+        </div>
+        <div class="impact-row">
+          <span class="k">Maintenance</span>
+          <span class="v">100% mine</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-cats reveal-stagger">
+      <div class="platform-card">
+        <div class="cat-num">⊹ 01</div>
+        <h4>Operational Monitoring</h4>
+        <p class="cat-desc">Continuous visibility into the health of registers, services, and back-of-house systems — catching issues before stores feel them.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          Register heartbeat · transaction-flow checks · service watchdogs
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="cat-num">⊹ 02</div>
+        <h4>Maintenance Automation</h4>
+        <p class="cat-desc">Scheduled and on-demand routines that handle the unglamorous work that has to happen between transactions — every night, every day, every store.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          Log rotation · DB cleanup · cache sync · end-of-day jobs
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="cat-num">⊹ 03</div>
+        <h4>Register-Level Utilities</h4>
+        <p class="cat-desc">Tools store associates and managers use directly — small, focused, and built for the specific friction the standard POS interface leaves behind.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          Setup utilities · diagnostic launchers · operator helpers
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="cat-num">⊹ 04</div>
+        <h4>Data Integration</h4>
+        <p class="cat-desc">Connectors and pipelines that move transactional and reference data between Xstore, ERP (Retek Resa / SIM), and downstream systems — keeping data clean and synchronized.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          ERP transformation tools · flat-file deployers · reconciliation
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="cat-num">⊹ 05</div>
+        <h4>Configuration Management</h4>
+        <p class="cat-desc">Per-store and per-register configuration — taxes, parameters, business rules, receipt formatting — managed centrally and deployed reliably.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          Store-attribute integration · receipt customization · parameter sync
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="cat-num">⊹ 06</div>
+        <h4>Reporting &amp; Visibility</h4>
+        <p class="cat-desc">Custom dashboards and reports — built where standard Xstore reporting doesn't cover the question leadership or operations actually need answered.</p>
+        <div class="examples">
+          <span class="ex-label">Example apps</span>
+          Exception reports · KPI dashboards · audit trails
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SELECTED PROJECTS ==================== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 04</span>
+        <span class="section-label">Selected Projects</span>
+      </div>
+      <h2 class="display-lg">Other things I've shipped.</h2>
+    </div>
+
+    <div class="project-grid reveal-stagger">
+      <div class="project-card">
+        <div class="num">→ 01</div>
+        <h4>Employee Management System</h4>
+        <p>Full ASP.NET application for employee identity and access, integrated with Xstore and Xoffice. Produces formatted flat-file outputs for downstream store deployment.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 02</div>
+        <h4>A/R Customer &amp; KYC System</h4>
+        <p>Accounts-receivable customer management with Know-Your-Customer workflows for Xstore. Centralized customer onboarding and compliance with formatted flat-file export.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 03</div>
+        <h4>Store Attribute Integration</h4>
+        <p>Per-store configuration management — tax setup, receipt header/footer customization, and operational attributes — pushed to stores as deployable flat files.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 04</div>
+        <h4>AI-Assisted Workflow Stack</h4>
+        <p>Day-to-day use of Claude, GitHub Copilot, ChatGPT, Gemini, and Ollama (local models) to accelerate code generation, automate technical documentation, and reduce time-to-resolution on complex incidents.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 05</div>
+        <h4>Hardware &amp; Payment Integration</h4>
+        <p>Integration and maintenance of Verifone pinpads (with MX downloader), Zebra scanners, and tablet POS hardware across the register fleet. EMV and contactless certifications delivered.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 06</div>
+        <h4>BI Dashboards &amp; SSRS</h4>
+        <p>Custom BI dashboards and SQL Server Reporting Services reports surfacing real-time visibility into sales, exceptions, KPIs, and system health for operations and leadership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CAPABILITIES ==================== -->
+<section class="caps" id="capabilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 05</span>
+        <span class="section-label">Capabilities</span>
+      </div>
+      <h2 class="display-lg">The toolkit.</h2>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="cap-block">
+        <div class="cap-label">POS Platforms</div>
+        <div class="cap-items">Oracle Xstore · Xcenter · Xoffice</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">ERP / Retail Systems</div>
+        <div class="cap-items">Oracle Retek Resa · SIM · ERP transformation servers</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Databases &amp; BI</div>
+        <div class="cap-items">SQL Server (T-SQL, schema design, stored procedures, performance tuning) · SSRS · custom dashboards · KPI &amp; exception reporting</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Development</div>
+        <div class="cap-items">.NET (C# / VB.NET) · ASP.NET · WinForms · PowerShell · Batch / VBScript · React · JavaScript</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Payment &amp; Compliance</div>
+        <div class="cap-items">Verifone pinpads · EMV / contactless · PCI · Zebra scanners · tablet POS</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Digital Signage</div>
+        <div class="cap-items">Samsung MagicInfo · BrightSign</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">AI-Assisted Development</div>
+        <div class="cap-items">Claude · GitHub Copilot · ChatGPT · Gemini · Ollama (local models)</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">E-commerce &amp; Creative</div>
+        <div class="cap-items">Shopify (Horizon themes) · Printify · Adobe Photoshop &amp; Illustrator · Canva · Leonardo.ai</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Systems / Remote Admin</div>
+        <div class="cap-items">Intel AMT · PsExec · WMI · WinRM · Group Policy</div>
+      </div>
+    </div>
+
+    <div class="extras">
+      <div class="reveal">
+        <div class="ex-label">Education</div>
+        <div class="ex-content">Associate's Degree</div>
+        <div class="ex-sub">Miami Dade College</div>
+      </div>
+      <div class="reveal">
+        <div class="ex-label">Languages</div>
+        <div class="ex-content">English · Spanish</div>
+        <div class="ex-sub">Native bilingual</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CURRENTLY ==================== -->
+<section id="currently">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 06</span>
+        <span class="section-label">Currently</span>
+      </div>
+      <h2 class="display-lg">What I'm into right now.</h2>
+    </div>
+    <div class="currently-grid reveal-stagger">
+      <div class="currently-card">
+        <div class="verb">Building</div>
+        <div class="what">AI-assisted internal tooling</div>
+        <div class="detail">Prototyping React-based generators that compress repetitive Xstore configuration work — DataLoader files, macro scripts, and store-deployment artifacts — from hours of manual work into minutes.</div>
+      </div>
+      <div class="currently-card">
+        <div class="verb">Exploring</div>
+        <div class="what">Local LLMs with Ollama</div>
+        <div class="detail">Running open-weight models locally for tasks where I don't want data leaving the network. Comparing throughput, quality, and where local models genuinely replace cloud APIs.</div>
+      </div>
+      <div class="currently-card">
+        <div class="verb">Sharpening</div>
+        <div class="what">Solutions architecture chops</div>
+        <div class="detail">Studying how the AI tooling layer reshapes traditional retail IT — from how POS systems should expose data to how teams should organize around model-assisted workflows.</div>
+      </div>
+    </div>
+    <span class="currently-stamp">Last updated · May 2026</span>
+  </div>
+</section>
+
+<!-- ==================== ELSEWHERE ==================== -->
+<section id="elsewhere">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 07</span>
+        <span class="section-label">Elsewhere</span>
+      </div>
+      <h2 class="display-lg">Beyond the day job.</h2>
+    </div>
+    <div class="elsewhere reveal-stagger">
+      <a class="elsewhere-card" href="https://www.youtube.com/@littletechlab" target="_blank" rel="noopener">
+        <div class="label">YouTube</div>
+        <h4>Little Tech Lab</h4>
+        <p>Unscripted tech exploration covering AI, emerging technologies, and educational tutorials. Hands-on experimentation, plain-English explanations.</p>
+        <span class="link">Watch on YouTube <span class="arrow">→</span></span>
+      </a>
+      <a class="elsewhere-card" href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">
+        <div class="label">LinkedIn</div>
+        <h4>Professional Network</h4>
+        <p>Full work history, recommendations from teammates and stakeholders, and a place to start a conversation if you'd rather not email.</p>
+        <span class="link">Connect on LinkedIn <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="eyebrow reveal">§ 08 · Get in Touch</span>
+    <h2 class="reveal">Let's <em>talk shop.</em></h2>
+    <p class="lead reveal">
+      Open to senior IC and lead roles — POS systems, business systems analysis, solutions architecture, retail technology, or anywhere deep retail-stack knowledge meets AI-assisted engineering.
+    </p>
+    <div class="contact-links reveal-stagger">
+      <div class="item">
+        <div class="label">Email</div>
+        <a href="mailto:hiram.sanchez.it@gmail.com">hiram.sanchez.it@gmail.com</a>
+      </div>
+      <div class="item">
+        <div class="label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">linkedin.com/in/hiram-sanchez</a>
+      </div>
+      <div class="item">
+        <div class="label">Location</div>
+        <a href="https://maps.google.com/?q=Hialeah,FL" target="_blank" rel="noopener">Hialeah, Florida</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="inner">
+    <div>© 2026 Hiram Sanchez</div>
+    <div>Hand-built · No frameworks</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+  // Count-up animation for stats
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  function animateCount(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const format = el.dataset.format;
+    const countEl = el.querySelector('.count');
+    if (!countEl) return;
+    const duration = 1400;
+    const start = performance.now();
+    const initial = 0;
+    function tick(now) {
+      const elapsed = now - start;
+      const t = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(t);
+      const current = Math.round(initial + (target - initial) * eased);
+      if (format === 'k') {
+        countEl.textContent = current >= 1000 ? '~' + Math.round(current / 1000) + 'K' : current.toString();
+      } else {
+        countEl.textContent = current.toLocaleString('en-US');
+      }
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const statIO = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        statIO.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.num[data-count]').forEach(el => {
+    const countEl = el.querySelector('.count');
+    if (countEl) countEl.textContent = '0';
+    statIO.observe(el);
+  });
+
+  // Nav border on scroll
+  const nav = document.getElementById('topnav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+</script>
+
+</body>
 </html>
