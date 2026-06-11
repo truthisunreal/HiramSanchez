@@ -7,12 +7,14 @@
 <meta name="description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development. Based in Hialeah, Florida." />
 <meta name="author" content="Hiram Sanchez" />
 <meta name="theme-color" content="#F7F2E8" />
+<link rel="canonical" href="https://www.hiramsanchez.com/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile" />
 <meta property="og:title" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
 <meta property="og:description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development." />
-<meta property="og:image" content="./og-image.png" />
+<meta property="og:url" content="https://www.hiramsanchez.com/" />
+<meta property="og:image" content="https://www.hiramsanchez.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
@@ -23,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
 <meta name="twitter:description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development." />
-<meta name="twitter:image" content="./og-image.png" />
+<meta name="twitter:image" content="https://www.hiramsanchez.com/og-image.png" />
 
 <!-- Structured data: Person schema -->
 <script type="application/ld+json">
@@ -32,6 +34,7 @@
   "@type": "Person",
   "name": "Hiram Sanchez",
   "jobTitle": "Senior Business Analyst & POS Systems Specialist",
+  "url": "https://www.hiramsanchez.com/",
   "description": "Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development.",
   "email": "hiram.sanchez.it@gmail.com",
   "address": {
@@ -62,7 +65,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=DM+Sans:opsz,wght@9..40,400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   /* ---------- Tokens ---------- */
   :root {
@@ -72,9 +75,10 @@
     --ink:          #0E1B2A;
     --ink-soft:     #1F2F45;
     --gray:         #54637A;
-    --gray-soft:    #8C9AAE;
+    --gray-soft:    #66758B;   /* darkened from #8C9AAE for WCAG AA on cream */
     --rule:         #DDD3BF;
-    --accent:       #B26A2C;
+    --accent:       #B26A2C;   /* display sizes & decorative only */
+    --accent-text:  #96541E;   /* accent for small text — 4.5:1+ on cream */
     --accent-soft:  #D4A574;
     --accent-bg:    #F4E6D4;
 
@@ -85,7 +89,11 @@
 
   /* ---------- Reset & base ---------- */
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px; /* keep anchored headings clear of fixed nav */
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     margin: 0;
     font-family: var(--body);
@@ -119,6 +127,22 @@
     background: var(--accent);
     color: var(--cream);
   }
+
+  .skip-link {
+    position: absolute;
+    left: 16px; top: -48px;
+    z-index: 200;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 12px 18px;
+    border-radius: 2px;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 16px; }
 
   /* ---------- Layout ---------- */
   .container {
@@ -207,7 +231,7 @@
   .section-head .section-num {
     font-family: var(--mono);
     font-size: 12px;
-    color: var(--accent);
+    color: var(--accent-text);
     letter-spacing: 0.18em;
     text-transform: uppercase;
     display: block;
@@ -274,19 +298,82 @@
     letter-spacing: 0.12em;
     transition: color 0.2s;
     position: relative;
+    padding-bottom: 4px;
   }
-  nav.topnav ul a:hover { color: var(--accent); }
+  nav.topnav ul a:hover { color: var(--accent-text); }
+  nav.topnav ul a.active { color: var(--accent-text); }
+  nav.topnav ul a.active::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  /* Mobile nav toggle + panel */
+  .nav-toggle {
+    display: none;
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    width: 40px; height: 36px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .nav-toggle .bar {
+    display: block;
+    width: 16px; height: 1.5px;
+    background: var(--ink);
+    margin: 0 auto;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .nav-toggle .bar + .bar { margin-top: 5px; }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(3.25px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { transform: translateY(-3.25px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 32px 16px;
+  }
+  .mobile-menu li + li { border-top: 1px solid var(--rule); }
+  .mobile-menu a {
+    display: block;
+    padding: 14px 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .mobile-menu a.active { color: var(--accent-text); }
+  nav.topnav.open .mobile-menu { display: block; }
+
   @media (max-width: 720px) {
-    nav.topnav ul { display: none; }
+    nav.topnav ul.desktop-links { display: none; }
+    .nav-toggle { display: block; }
   }
 
   /* ---------- Hero ---------- */
   .hero {
     min-height: 100vh;
+    min-height: 100svh; /* stable on mobile while browser chrome collapses */
     display: flex;
     align-items: center;
     padding: 120px 0 80px;
     position: relative;
+    overflow: hidden;
   }
   .hero .name { margin-bottom: 32px; }
   .hero .role-line {
@@ -303,8 +390,74 @@
     line-height: 1.55;
     color: var(--gray);
     max-width: 640px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
+
+  /* Watermark monogram balancing the right side on wide screens */
+  .hero-watermark {
+    position: absolute;
+    right: -2vw;
+    top: 50%;
+    transform: translateY(-52%);
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(280px, 34vw, 520px);
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.07;
+    letter-spacing: -0.06em;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media (max-width: 880px) { .hero-watermark { display: none; } }
+
+  /* Primary CTAs */
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 15px 26px;
+    border-radius: 2px;
+    border: 1px solid var(--ink);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-solid {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .btn-solid:hover {
+    background: var(--accent-text);
+    border-color: var(--accent-text);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent-text);
+    color: var(--accent-text);
+    transform: translateY(-1px);
+  }
+  .btn .glyph { font-size: 14px; line-height: 1; }
+  @media (max-width: 480px) {
+    .cta-row { flex-direction: column; align-items: stretch; }
+    .btn { justify-content: center; }
+  }
+
   .hero .meta-row {
     display: flex;
     flex-wrap: wrap;
@@ -330,7 +483,7 @@
     padding-bottom: 2px;
   }
   .hero .meta-row a:hover {
-    color: var(--accent);
+    color: var(--accent-text);
     border-bottom-color: var(--accent);
   }
 
@@ -371,6 +524,14 @@
   @media (max-width: 880px) {
     .stats .row { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
     .stats .stat:nth-child(odd) { border-left: none; padding-left: 0; }
+    /* fifth stat closes the section full-width instead of orphaning */
+    .stats .stat:nth-child(5) {
+      grid-column: 1 / -1;
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 28px;
+    }
   }
 
   /* ---------- About ---------- */
@@ -425,7 +586,7 @@
   .job-title-block .org .side-tag {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-left: 12px;
@@ -479,7 +640,7 @@
     top: 24px; right: 32px;
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     letter-spacing: 0.18em;
   }
   .project-feature .meta-side .label {
@@ -551,7 +712,7 @@
   .project-card .num {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     letter-spacing: 0.18em;
     margin-bottom: 16px;
   }
@@ -586,7 +747,7 @@
   .cap-block .cap-label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 10px;
@@ -620,7 +781,7 @@
   .elsewhere-card .label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 16px;
@@ -649,8 +810,8 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .elsewhere-card .link:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
+    color: var(--accent-text);
+    border-bottom-color: var(--accent-text);
   }
   .elsewhere-card .link .arrow { display: inline-block; transition: transform 0.3s; margin-left: 4px; }
   .elsewhere-card:hover .link .arrow { transform: translateX(4px); }
@@ -668,7 +829,7 @@
   .extras .ex-label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 16px;
@@ -696,7 +857,9 @@
     position: relative;
   }
   .contact .container { z-index: 2; }
-  .contact .eyebrow { color: var(--accent-soft); }
+  .contact .section-head { margin-bottom: 40px; }
+  .contact .section-head .section-num { color: var(--accent-soft); }
+  .contact .section-head .section-label { color: rgba(247, 242, 232, 0.55); }
   .contact h2 {
     color: var(--cream);
     font-family: var(--display);
@@ -704,7 +867,7 @@
     font-weight: 400;
     line-height: 1;
     letter-spacing: -0.03em;
-    margin: 24px 0 40px;
+    margin: 0;
   }
   .contact h2 em { color: var(--accent-soft); font-style: italic; font-weight: 300; }
   .contact .lead { color: rgba(247, 242, 232, 0.75); max-width: 600px; margin-bottom: 56px; }
@@ -883,7 +1046,7 @@
   .platform-card .cat-num {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     letter-spacing: 0.18em;
     margin-bottom: 16px;
   }
@@ -940,7 +1103,7 @@
   .currently-card .verb {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent);
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.18em;
     margin-bottom: 12px;
@@ -976,12 +1139,13 @@
     body::before { display: none !important; }
     nav.topnav, .contact, footer.foot, .elsewhere-card .link .arrow,
     .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; }
-    nav.topnav { display: none; }
+    nav.topnav, .nav-toggle, .mobile-menu, .hero-watermark { display: none; }
     section { padding: 16pt 0; page-break-inside: avoid; }
     .hero { min-height: auto; padding: 0 0 20pt; }
     .display-xl { font-size: 36pt; }
     .display-lg { font-size: 22pt; }
     .lead { font-size: 13pt; }
+    .btn { background: white !important; color: black !important; border: 1pt solid #888 !important; padding: 6pt 10pt; }
     .stats { background: white; border: 1pt solid #888; padding: 12pt 0; }
     .stats .num { font-size: 22pt; }
     .caps { background: white; border-top: 1pt solid #ccc; border-bottom: 1pt solid #ccc; padding: 20pt 0; }
@@ -1000,9 +1164,25 @@
 </head>
 <body>
 
+<a class="skip-link" href="#top">Skip to content</a>
+
 <nav class="topnav" id="topnav">
   <div class="inner">
     <a class="brand" href="#top">Hiram<em>·</em>Sanchez</a>
+    <ul class="desktop-links" id="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navtoggle" aria-expanded="false" aria-controls="mobilemenu" aria-label="Open menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobilemenu">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -1016,6 +1196,7 @@
 
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="top">
+  <div class="hero-watermark" aria-hidden="true">HS</div>
   <div class="container">
     <span class="eyebrow reveal">Hialeah, Florida · Available for new roles</span>
     <h1 class="display-xl name reveal">Hiram <em>Sanchez</em></h1>
@@ -1023,12 +1204,14 @@
     <p class="tagline reveal">
       Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and the in-store software that keeps a 400-register operation running. Lately, leaning hard into AI-assisted development.
     </p>
+    <div class="cta-row reveal">
+      <a class="btn btn-solid" href="./Resume.pdf" target="_blank" rel="noopener">Download resume <span class="glyph">↓</span></a>
+      <a class="btn btn-ghost" href="./Hiram-Sanchez.vcf" download>Save contact <span class="glyph">↓</span></a>
+    </div>
     <div class="meta-row reveal">
       <span><span class="dot"></span>18+ years experience</span>
       <a href="mailto:hiram.sanchez.it@gmail.com">hiram.sanchez.it@gmail.com</a>
       <a href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="./Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
-      <a href="./Hiram-Sanchez.vcf" download>Save Contact ↓</a>
     </div>
   </div>
 </section>
@@ -1206,7 +1389,7 @@
         <p class="cat-desc">Tools store associates and managers use directly — small, focused, and built for the specific friction the standard POS interface leaves behind.</p>
         <div class="examples">
           <span class="ex-label">Example apps</span>
-          Setup utilities · diagnostic launchers · operator helpers
+          Multi-host remote launcher (WMI / PsExec) · PowerShell network config · diagnostic launchers
         </div>
       </div>
       <div class="platform-card">
@@ -1224,7 +1407,7 @@
         <p class="cat-desc">Per-store and per-register configuration — taxes, parameters, business rules, receipt formatting — managed centrally and deployed reliably.</p>
         <div class="examples">
           <span class="ex-label">Example apps</span>
-          Store-attribute integration · receipt customization · parameter sync
+          DataLoader promo-file generator (prc_deal) · Xstore macro-script generator · store-attribute integration
         </div>
       </div>
       <div class="platform-card">
@@ -1251,6 +1434,26 @@
       <h2 class="display-lg">Other things I've shipped.</h2>
     </div>
 
+    <div class="project-feature reveal">
+      <div class="meta-side">
+        <div class="label">Daily drivers</div>
+        <div class="number">5</div>
+        <div class="sub">Claude · Copilot · ChatGPT · Gemini · Ollama</div>
+      </div>
+      <div>
+        <h3>AI-Assisted Workflow Stack</h3>
+        <p>
+          A deliberate, production-grade workflow built around five AI tools — Claude and GitHub Copilot for code generation, ChatGPT and Gemini for analysis and documentation, and Ollama for local models when data can't leave the network. Recent tools shipped this way: a <strong>DataLoader promotion-file generator</strong> for Xstore's <em>prc_deal</em> tables, an <strong>Xstore macro-script generator</strong> with project-scoped templates, a <strong>multi-host remote program launcher</strong> for register administration (WMI / PsExec), and PowerShell tooling for register network configuration — plus documentation that writes itself alongside the work and shorter time-to-resolution on complex incidents.
+        </p>
+        <div class="tags">
+          <span>Code generation</span>
+          <span>Auto-documentation</span>
+          <span>Incident resolution</span>
+          <span>Local LLMs</span>
+        </div>
+      </div>
+    </div>
+
     <div class="project-grid reveal-stagger">
       <div class="project-card">
         <div class="num">→ 01</div>
@@ -1269,18 +1472,18 @@
       </div>
       <div class="project-card">
         <div class="num">→ 04</div>
-        <h4>AI-Assisted Workflow Stack</h4>
-        <p>Day-to-day use of Claude, GitHub Copilot, ChatGPT, Gemini, and Ollama (local models) to accelerate code generation, automate technical documentation, and reduce time-to-resolution on complex incidents.</p>
-      </div>
-      <div class="project-card">
-        <div class="num">→ 05</div>
         <h4>Hardware &amp; Payment Integration</h4>
         <p>Integration and maintenance of Verifone pinpads (with MX downloader), Zebra scanners, and tablet POS hardware across the register fleet. EMV and contactless certifications delivered.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 06</div>
+        <div class="num">→ 05</div>
         <h4>BI Dashboards &amp; SSRS</h4>
         <p>Custom BI dashboards and SQL Server Reporting Services reports surfacing real-time visibility into sales, exceptions, KPIs, and system health for operations and leadership.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 06</div>
+        <h4>Content Ops Toolkit</h4>
+        <p>Custom tools built for the e-commerce side venture: a Metricool-compatible CSV exporter for multi-platform video scheduling, a brand-voice social post generator across five platforms, and a Shopify-aware post generator.</p>
       </div>
     </div>
   </div>
@@ -1411,8 +1614,13 @@
 <!-- ==================== CONTACT ==================== -->
 <section class="contact" id="contact">
   <div class="container">
-    <span class="eyebrow reveal">§ 08 · Get in Touch</span>
-    <h2 class="reveal">Let's <em>talk shop.</em></h2>
+    <div class="section-head reveal">
+      <div class="meta">
+        <span class="section-num">§ 08</span>
+        <span class="section-label">Get in Touch</span>
+      </div>
+      <h2>Let's <em>talk shop.</em></h2>
+    </div>
     <p class="lead reveal">
       Open to senior IC and lead roles — POS systems, business systems analysis, solutions architecture, retail technology, or anywhere deep retail-stack knowledge meets AI-assisted engineering.
     </p>
@@ -1497,6 +1705,41 @@
     if (window.scrollY > 24) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   }, { passive: true });
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navtoggle');
+  navToggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  // Close the panel after a section link is tapped
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+
+  // Scroll-spy: highlight the nav link for the section in view
+  const spyTargets = ['about', 'experience', 'platform', 'projects', 'capabilities', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const allNavLinks = document.querySelectorAll('nav.topnav a[href^="#"]');
+  function setActive(id) {
+    allNavLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+  const spyIO = new IntersectionObserver((entries) => {
+    // pick the entry nearest the top band of the viewport
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      setActive(visible[0].target.id);
+    }
+  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+  spyTargets.forEach(sec => spyIO.observe(sec));
 </script>
 
 </body>

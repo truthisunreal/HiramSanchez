@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Sanchez;Hiram;;;
+FN:Hiram Sanchez
+TITLE:Senior Business Analyst & POS Systems Specialist
+TEL;TYPE=CELL,VOICE:+17863674135
+EMAIL;TYPE=INTERNET,PREF:hiram.sanchez.it@gmail.com
+ADR;TYPE=HOME:;;;Hialeah;FL;;United States
+URL:https://www.hiramsanchez.com
+item1.URL:https://www.linkedin.com/in/hiram-sanchez
+item1.X-ABLabel:LinkedIn
+item2.URL:https://www.youtube.com/@littletechlab
+item2.X-ABLabel:YouTube
+NOTE:18+ years in enterprise retail technology — POS platforms (Oracle Xstore)\, SQL Server\, ASP.NET\, and AI-assisted development.
+END:VCARD
