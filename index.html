@@ -6,14 +6,15 @@
 <title>Hiram Sanchez — Senior Business Analyst & POS Systems Specialist</title>
 <meta name="description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development. Based in Hialeah, Florida." />
 <meta name="author" content="Hiram Sanchez" />
-<meta name="theme-color" content="#F7F2E8" />
-<link rel="canonical" href="https://www.hiramsanchez.com/" />
+<meta name="theme-color" content="#F4F3EE" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0E0F0F" media="(prefers-color-scheme: dark)" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile" />
+<meta property="og:url" content="https://www.hiramsanchez.com/" />
+<link rel="canonical" href="https://www.hiramsanchez.com/" />
 <meta property="og:title" content="Hiram Sanchez — Senior Business Analyst & POS Systems Specialist" />
 <meta property="og:description" content="Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development." />
-<meta property="og:url" content="https://www.hiramsanchez.com/" />
 <meta property="og:image" content="https://www.hiramsanchez.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -33,8 +34,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Hiram Sanchez",
-  "jobTitle": "Senior Business Analyst & POS Systems Specialist",
   "url": "https://www.hiramsanchez.com/",
+  "jobTitle": "Senior Business Analyst & POS Systems Specialist",
   "description": "Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and AI-assisted development.",
   "email": "hiram.sanchez.it@gmail.com",
   "address": {
@@ -54,46 +55,73 @@
     "Business Systems Analysis"
   ],
   "sameAs": [
-    "https://www.linkedin.com/in/hiram-sanchez",
-    "https://www.youtube.com/@littletechlab"
+    "https://www.linkedin.com/in/hiram-sanchez"
   ]
 }
 </script>
 
 <!-- Favicon: inline SVG with HS monogram -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E1B2A'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='500' text-anchor='middle' fill='%23B26A2C'>HS</text></svg>" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23111111'/><text x='16' y='21.5' font-family='Menlo,monospace' font-size='15' font-weight='600' text-anchor='middle' fill='%237BC4B8'>HS</text></svg>" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=DM+Sans:opsz,wght@9..40,400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <style>
   /* ---------- Tokens ---------- */
   :root {
-    --cream:        #F7F2E8;
-    --paper:        #FCF7EC;
-    --paper-warm:   #F2EBDB;
-    --ink:          #0E1B2A;
-    --ink-soft:     #1F2F45;
-    --gray:         #54637A;
-    --gray-soft:    #66758B;   /* darkened from #8C9AAE for WCAG AA on cream */
-    --rule:         #DDD3BF;
-    --accent:       #B26A2C;   /* display sizes & decorative only */
-    --accent-text:  #96541E;   /* accent for small text — 4.5:1+ on cream */
-    --accent-soft:  #D4A574;
-    --accent-bg:    #F4E6D4;
+    --cream:        #F4F3EE;
+    --paper:        #FFFFFF;
+    --paper-warm:   #F7F7F2;
+    --ink:          #111111;
+    --ink-soft:     #2B2B2B;
+    --gray:         #666660;
+    --gray-soft:    #9A9A92;
+    --rule:         #D6D6CE;
+    --accent:       #0F7B6C;
+    --accent-soft:  #7BC4B8;
+    --accent-bg:    #E3F2EF;
+    --panel:        #111111;
+    --panel-fg:     #F4F3EE;
+    --panel-accent: #7BC4B8;
+    --grain:        rgba(0, 0, 0, 0.02);
+    --live-fg: #2F6B45; --live-bd: #9CC3A8; --live-bg: #E6F0E8;
 
-    --display: "Fraunces", "Times New Roman", serif;
-    --body:    "DM Sans", system-ui, sans-serif;
-    --mono:    "JetBrains Mono", "Menlo", monospace;
+    --display: "IBM Plex Mono", "Menlo", monospace;
+    --body:    "IBM Plex Sans", system-ui, sans-serif;
+    --mono:    "IBM Plex Mono", "Menlo", monospace;
+    color-scheme: light;
   }
+  /* Carbon copy: dark partner theme */
+  :root[data-theme="dark"] {
+    --cream:        #0E0F0F;
+    --paper:        #151717;
+    --paper-warm:   #1B1E1E;
+    --ink:          #EDEDE6;
+    --ink-soft:     #CFCFC6;
+    --gray:         #9A9A92;
+    --gray-soft:    #6A6A64;
+    --rule:         #2C2F2E;
+    --accent:       #3FC1AD;
+    --accent-soft:  #2E8F80;
+    --accent-bg:    #12302B;
+    --panel:        #EDEDE6;
+    --panel-fg:     #0E0F0F;
+    --panel-accent: #0F7B6C;
+    --grain:        rgba(63, 193, 173, 0.03);
+    --live-fg: #7FD19B; --live-bd: #2E5A3E; --live-bg: #12261A;
+    color-scheme: dark;
+  }
+  /* Receipt details */
+  .display-xl { letter-spacing: -0.06em; font-weight: 500; }
+  .display-lg, .platform-name { letter-spacing: -0.04em; font-weight: 500; }
+  .project-grid, .hub-apps, .project-feature, .currently-card, .stats, .platform-cats { border-style: dashed !important; }
+  body { transition: background-color 0.3s ease, color 0.3s ease; }
+
+
 
   /* ---------- Reset & base ---------- */
   *, *::before, *::after { box-sizing: border-box; }
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 76px; /* keep anchored headings clear of fixed nav */
-    -webkit-text-size-adjust: 100%;
-  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
     font-family: var(--body);
@@ -110,8 +138,8 @@
     content: "";
     position: fixed; inset: 0;
     background-image:
-      radial-gradient(circle at 25% 30%, rgba(139, 109, 64, 0.04) 0%, transparent 40%),
-      radial-gradient(circle at 75% 70%, rgba(139, 109, 64, 0.03) 0%, transparent 40%);
+      radial-gradient(circle at 25% 30%, var(--grain) 0%, transparent 40%),
+      radial-gradient(circle at 75% 70%, var(--grain) 0%, transparent 40%);
     pointer-events: none;
     z-index: 0;
   }
@@ -127,22 +155,6 @@
     background: var(--accent);
     color: var(--cream);
   }
-
-  .skip-link {
-    position: absolute;
-    left: 16px; top: -48px;
-    z-index: 200;
-    background: var(--ink);
-    color: var(--cream);
-    font-family: var(--mono);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 12px 18px;
-    border-radius: 2px;
-    transition: top 0.2s ease;
-  }
-  .skip-link:focus { top: 16px; }
 
   /* ---------- Layout ---------- */
   .container {
@@ -231,7 +243,7 @@
   .section-head .section-num {
     font-family: var(--mono);
     font-size: 12px;
-    color: var(--accent-text);
+    color: var(--accent);
     letter-spacing: 0.18em;
     text-transform: uppercase;
     display: block;
@@ -264,7 +276,7 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(247, 242, 232, 0.85);
+    background: color-mix(in srgb, var(--cream) 85%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
@@ -279,6 +291,14 @@
     align-items: center;
     justify-content: space-between;
   }
+  .theme-toggle {
+    font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--ink); background: transparent; border: 1px dashed var(--rule);
+    padding: 6px 10px; cursor: pointer; margin-left: 24px; transition: color .2s, border-color .2s;
+  }
+  .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  nav.topnav .inner > ul { margin-left: auto; }
   nav.topnav .brand {
     font-family: var(--display);
     font-size: 19px;
@@ -298,82 +318,19 @@
     letter-spacing: 0.12em;
     transition: color 0.2s;
     position: relative;
-    padding-bottom: 4px;
   }
-  nav.topnav ul a:hover { color: var(--accent-text); }
-  nav.topnav ul a.active { color: var(--accent-text); }
-  nav.topnav ul a.active::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: -2px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  /* Mobile nav toggle + panel */
-  .nav-toggle {
-    display: none;
-    appearance: none;
-    background: transparent;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    width: 40px; height: 36px;
-    padding: 0;
-    cursor: pointer;
-    position: relative;
-  }
-  .nav-toggle:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
-  .nav-toggle .bar {
-    display: block;
-    width: 16px; height: 1.5px;
-    background: var(--ink);
-    margin: 0 auto;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-  }
-  .nav-toggle .bar + .bar { margin-top: 5px; }
-  .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(3.25px) rotate(45deg); }
-  .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { transform: translateY(-3.25px) rotate(-45deg); }
-
-  .mobile-menu {
-    display: none;
-    border-top: 1px solid var(--rule);
-    background: var(--paper);
-  }
-  .mobile-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 8px 32px 16px;
-  }
-  .mobile-menu li + li { border-top: 1px solid var(--rule); }
-  .mobile-menu a {
-    display: block;
-    padding: 14px 0;
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-  }
-  .mobile-menu a.active { color: var(--accent-text); }
-  nav.topnav.open .mobile-menu { display: block; }
-
+  nav.topnav ul a:hover { color: var(--accent); }
   @media (max-width: 720px) {
-    nav.topnav ul.desktop-links { display: none; }
-    .nav-toggle { display: block; }
+    nav.topnav ul { display: none; }
   }
 
   /* ---------- Hero ---------- */
   .hero {
     min-height: 100vh;
-    min-height: 100svh; /* stable on mobile while browser chrome collapses */
     display: flex;
     align-items: center;
     padding: 120px 0 80px;
     position: relative;
-    overflow: hidden;
   }
   .hero .name { margin-bottom: 32px; }
   .hero .role-line {
@@ -390,74 +347,8 @@
     line-height: 1.55;
     color: var(--gray);
     max-width: 640px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
-
-  /* Watermark monogram balancing the right side on wide screens */
-  .hero-watermark {
-    position: absolute;
-    right: -2vw;
-    top: 50%;
-    transform: translateY(-52%);
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(280px, 34vw, 520px);
-    line-height: 1;
-    color: var(--accent);
-    opacity: 0.07;
-    letter-spacing: -0.06em;
-    user-select: none;
-    pointer-events: none;
-    z-index: 0;
-  }
-  @media (max-width: 880px) { .hero-watermark { display: none; } }
-
-  /* Primary CTAs */
-  .cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-bottom: 36px;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 15px 26px;
-    border-radius: 2px;
-    border: 1px solid var(--ink);
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  }
-  .btn-solid {
-    background: var(--ink);
-    color: var(--cream);
-  }
-  .btn-solid:hover {
-    background: var(--accent-text);
-    border-color: var(--accent-text);
-    transform: translateY(-1px);
-  }
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink);
-  }
-  .btn-ghost:hover {
-    border-color: var(--accent-text);
-    color: var(--accent-text);
-    transform: translateY(-1px);
-  }
-  .btn .glyph { font-size: 14px; line-height: 1; }
-  @media (max-width: 480px) {
-    .cta-row { flex-direction: column; align-items: stretch; }
-    .btn { justify-content: center; }
-  }
-
   .hero .meta-row {
     display: flex;
     flex-wrap: wrap;
@@ -483,7 +374,7 @@
     padding-bottom: 2px;
   }
   .hero .meta-row a:hover {
-    color: var(--accent-text);
+    color: var(--accent);
     border-bottom-color: var(--accent);
   }
 
@@ -524,14 +415,6 @@
   @media (max-width: 880px) {
     .stats .row { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
     .stats .stat:nth-child(odd) { border-left: none; padding-left: 0; }
-    /* fifth stat closes the section full-width instead of orphaning */
-    .stats .stat:nth-child(5) {
-      grid-column: 1 / -1;
-      border-left: none;
-      padding-left: 0;
-      border-top: 1px solid var(--rule);
-      padding-top: 28px;
-    }
   }
 
   /* ---------- About ---------- */
@@ -586,7 +469,7 @@
   .job-title-block .org .side-tag {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-left: 12px;
@@ -617,6 +500,13 @@
     background: var(--accent);
   }
   .job-bullets li strong { color: var(--ink); }
+  .job-group { margin: 0 0 28px 248px; }
+  .job-group .job-bullets { margin-left: 0; }
+  .group-label {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 12px;
+  }
+  @media (max-width: 720px) { .job-group { margin-left: 0; } }
   @media (max-width: 720px) {
     .job-header { grid-template-columns: 1fr; gap: 8px; }
     .job-bullets { margin-left: 0; }
@@ -640,7 +530,7 @@
     top: 24px; right: 32px;
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     letter-spacing: 0.18em;
   }
   .project-feature .meta-side .label {
@@ -712,7 +602,7 @@
   .project-card .num {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     letter-spacing: 0.18em;
     margin-bottom: 16px;
   }
@@ -747,7 +637,7 @@
   .cap-block .cap-label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 10px;
@@ -781,7 +671,7 @@
   .elsewhere-card .label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 16px;
@@ -810,8 +700,8 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .elsewhere-card .link:hover {
-    color: var(--accent-text);
-    border-bottom-color: var(--accent-text);
+    color: var(--accent);
+    border-bottom-color: var(--accent);
   }
   .elsewhere-card .link .arrow { display: inline-block; transition: transform 0.3s; margin-left: 4px; }
   .elsewhere-card:hover .link .arrow { transform: translateX(4px); }
@@ -829,7 +719,7 @@
   .extras .ex-label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 16px;
@@ -851,26 +741,24 @@
 
   /* ---------- Contact ---------- */
   .contact {
-    background: var(--ink);
-    color: var(--cream);
+    background: var(--panel);
+    color: var(--panel-fg);
     padding: 96px 0;
     position: relative;
   }
   .contact .container { z-index: 2; }
-  .contact .section-head { margin-bottom: 40px; }
-  .contact .section-head .section-num { color: var(--accent-soft); }
-  .contact .section-head .section-label { color: rgba(247, 242, 232, 0.55); }
+  .contact .eyebrow { color: var(--panel-accent); }
   .contact h2 {
-    color: var(--cream);
+    color: var(--panel-fg);
     font-family: var(--display);
     font-size: clamp(40px, 6vw, 80px);
     font-weight: 400;
     line-height: 1;
     letter-spacing: -0.03em;
-    margin: 0;
+    margin: 24px 0 40px;
   }
-  .contact h2 em { color: var(--accent-soft); font-style: italic; font-weight: 300; }
-  .contact .lead { color: rgba(247, 242, 232, 0.75); max-width: 600px; margin-bottom: 56px; }
+  .contact h2 em { color: var(--panel-accent); font-style: italic; font-weight: 300; }
+  .contact .lead { color: color-mix(in srgb, var(--panel-fg) 75%, transparent); max-width: 600px; margin-bottom: 56px; }
   .contact-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -880,7 +768,7 @@
   .contact-links .item .label {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-soft);
+    color: var(--panel-accent);
     text-transform: uppercase;
     letter-spacing: 0.16em;
     margin-bottom: 10px;
@@ -889,25 +777,25 @@
     font-family: var(--display);
     font-size: 22px;
     font-weight: 400;
-    color: var(--cream);
+    color: var(--panel-fg);
     letter-spacing: -0.015em;
-    border-bottom: 1px solid rgba(247, 242, 232, 0.2);
+    border-bottom: 1px solid color-mix(in srgb, var(--panel-fg) 20%, transparent);
     padding-bottom: 4px;
     transition: border-color 0.2s, color 0.2s;
     display: inline-block;
     word-break: break-word;
   }
   .contact-links .item a:hover {
-    color: var(--accent-soft);
-    border-bottom-color: var(--accent-soft);
+    color: var(--panel-accent);
+    border-bottom-color: var(--panel-accent);
   }
 
   /* ---------- Footer ---------- */
   footer.foot {
-    background: var(--ink);
-    color: rgba(247, 242, 232, 0.5);
+    background: var(--panel);
+    color: color-mix(in srgb, var(--panel-fg) 50%, transparent);
     padding: 32px 0;
-    border-top: 1px solid rgba(247, 242, 232, 0.1);
+    border-top: 1px solid color-mix(in srgb, var(--panel-fg) 10%, transparent);
     font-family: var(--mono);
     font-size: 11px;
     text-transform: uppercase;
@@ -981,8 +869,8 @@
     color: var(--ink);
   }
   .platform-intro .impact-card {
-    background: var(--ink);
-    color: var(--cream);
+    background: var(--panel);
+    color: var(--panel-fg);
     padding: 32px;
     position: relative;
   }
@@ -990,7 +878,7 @@
     content: "PLATFORM IMPACT";
     font-family: var(--mono);
     font-size: 10px;
-    color: var(--accent-soft);
+    color: var(--panel-accent);
     letter-spacing: 0.2em;
     margin-bottom: 16px;
     display: block;
@@ -999,7 +887,7 @@
     font-family: var(--display);
     font-size: 64px;
     font-weight: 400;
-    color: var(--accent-soft);
+    color: var(--panel-accent);
     line-height: 1;
     letter-spacing: -0.03em;
     margin-bottom: 8px;
@@ -1007,7 +895,7 @@
   .platform-intro .impact-card .impact-label {
     font-family: var(--body);
     font-size: 14px;
-    color: rgba(247, 242, 232, 0.7);
+    color: color-mix(in srgb, var(--panel-fg) 70%, transparent);
     line-height: 1.45;
     margin-bottom: 20px;
   }
@@ -1015,17 +903,17 @@
     display: flex;
     justify-content: space-between;
     padding: 14px 0;
-    border-top: 1px solid rgba(247, 242, 232, 0.12);
+    border-top: 1px solid color-mix(in srgb, var(--panel-fg) 12%, transparent);
     font-size: 13px;
   }
   .platform-intro .impact-card .impact-row .k {
     font-family: var(--mono);
-    color: rgba(247, 242, 232, 0.6);
+    color: color-mix(in srgb, var(--panel-fg) 60%, transparent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 11px;
   }
-  .platform-intro .impact-card .impact-row .v { color: var(--cream); }
+  .platform-intro .impact-card .impact-row .v { color: var(--panel-fg); }
 
   .platform-cats {
     display: grid;
@@ -1046,7 +934,7 @@
   .platform-card .cat-num {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     letter-spacing: 0.18em;
     margin-bottom: 16px;
   }
@@ -1079,6 +967,98 @@
     margin-bottom: 4px;
   }
 
+  /* ---------- Two-platform layout ---------- */
+  .platform-block { margin-bottom: 88px; }
+  .platform-block:last-child { margin-bottom: 0; }
+  .platform-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .platform-label .pl-letter {
+    font-family: var(--display);
+    font-size: 20px;
+    color: var(--accent);
+    letter-spacing: 0;
+    font-style: italic;
+  }
+  .platform-name {
+    font-family: var(--display);
+    font-size: clamp(30px, 3.4vw, 42px);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .status {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 4px 9px;
+    border-radius: 2px;
+    border: 1px solid;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+  }
+  .status::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .status.live    { color: var(--live-fg); border-color: var(--live-bd); background: var(--live-bg); }
+  .status.dev     { color: var(--accent); border-color: var(--accent-soft); background: var(--accent-bg); }
+  .status.planned { color: var(--gray); border-color: var(--rule); background: var(--paper); }
+  .status.live::before { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .hub-apps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 8px;
+  }
+  @media (max-width: 880px) { .hub-apps { grid-template-columns: 1fr; } }
+  .hub-group { background: var(--paper); padding: 28px; }
+  .hub-apps-label { font-family: var(--mono); font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; margin: 8px 0 14px; }
+  .hub-item { background: var(--paper); padding: 24px 26px; }
+  .hub-item strong { display: block; font-family: var(--display); font-size: 17px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 4px; color: var(--ink); }
+  .hub-item span { display: block; font-size: 14px; color: var(--gray); line-height: 1.45; }
+  .hub-group-label { margin-bottom: 18px; }
+  .hub-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .hub-group li strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 3px;
+  }
+  .hub-group li span {
+    display: block;
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.45;
+  }
+  .project-card .num { text-transform: uppercase; }
+
   /* ---------- Currently section ---------- */
   .currently-grid {
     display: grid;
@@ -1103,7 +1083,7 @@
   .currently-card .verb {
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--accent-text);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.18em;
     margin-bottom: 12px;
@@ -1139,13 +1119,12 @@
     body::before { display: none !important; }
     nav.topnav, .contact, footer.foot, .elsewhere-card .link .arrow,
     .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; }
-    nav.topnav, .nav-toggle, .mobile-menu, .hero-watermark { display: none; }
+    nav.topnav { display: none; }
     section { padding: 16pt 0; page-break-inside: avoid; }
     .hero { min-height: auto; padding: 0 0 20pt; }
     .display-xl { font-size: 36pt; }
     .display-lg { font-size: 22pt; }
     .lead { font-size: 13pt; }
-    .btn { background: white !important; color: black !important; border: 1pt solid #888 !important; padding: 6pt 10pt; }
     .stats { background: white; border: 1pt solid #888; padding: 12pt 0; }
     .stats .num { font-size: 22pt; }
     .caps { background: white; border-top: 1pt solid #ccc; border-bottom: 1pt solid #ccc; padding: 20pt 0; }
@@ -1161,42 +1140,34 @@
     .contact, footer.foot { display: none; }
   }
 </style>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
 </head>
 <body>
-
-<a class="skip-link" href="#top">Skip to content</a>
 
 <nav class="topnav" id="topnav">
   <div class="inner">
     <a class="brand" href="#top">Hiram<em>·</em>Sanchez</a>
-    <ul class="desktop-links" id="navlinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#platform">Platform</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navtoggle" aria-expanded="false" aria-controls="mobilemenu" aria-label="Open menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobilemenu">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#platform">Platform</a></li>
+      <li><a href="#platform">Platforms</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">[ dark ]</button>
   </div>
 </nav>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="top">
-  <div class="hero-watermark" aria-hidden="true">HS</div>
   <div class="container">
     <span class="eyebrow reveal">Hialeah, Florida · Available for new roles</span>
     <h1 class="display-xl name reveal">Hiram <em>Sanchez</em></h1>
@@ -1204,14 +1175,12 @@
     <p class="tagline reveal">
       Eighteen years engineering enterprise retail technology — POS platforms, SQL Server, ASP.NET applications, and the in-store software that keeps a 400-register operation running. Lately, leaning hard into AI-assisted development.
     </p>
-    <div class="cta-row reveal">
-      <a class="btn btn-solid" href="./Resume.pdf" target="_blank" rel="noopener">Download resume <span class="glyph">↓</span></a>
-      <a class="btn btn-ghost" href="./Hiram-Sanchez.vcf" download>Save contact <span class="glyph">↓</span></a>
-    </div>
     <div class="meta-row reveal">
       <span><span class="dot"></span>18+ years experience</span>
       <a href="mailto:hiram.sanchez.it@gmail.com">hiram.sanchez.it@gmail.com</a>
       <a href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="./Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      <a href="./Hiram-Sanchez.vcf" download>Save Contact ↓</a>
     </div>
   </div>
 </section>
@@ -1290,15 +1259,54 @@
           <div class="org">Duty Free Americas · Hollywood, FL</div>
         </div>
       </div>
-      <ul class="job-bullets">
-        <li><strong>Own POS change control</strong> and business rules across 400+ registers and 200+ SQL servers — including a rule database of ~5,000 covering promotions, discounts, tenders, and store behaviors.</li>
-        <li><strong>Architect of POS Plus Platform</strong> — a suite of 30+ custom applications running 24/7 across all retail locations, extending Xstore functionality where the platform stops short.</li>
-        <li>Implemented and maintain <strong>Oracle Xstore, Xcenter, and Xoffice</strong>, integrated with ERP systems (Oracle Retek Resa, SIM) for accurate end-to-end transaction flow.</li>
-        <li>Designed and maintain SQL Server schemas across 200+ store servers — table design, stored procedures, performance tuning, and data-integrity controls.</li>
-        <li>Built ASP.NET enterprise applications: full employee management, A/R customer management with KYC, and store-attribute integration (taxes, receipt header/footer customization) — all generating flat-file outputs for store deployment.</li>
-        <li>Delivered enterprise initiatives: <strong>PCI compliance, EMV / contactless certifications, Dynamic Currency Conversion, loyalty integration, first-gen tablet POS, and customer self-checkout</strong>.</li>
-        <li>Primary Tier-2 escalation point for complex POS, network, and database incidents; authors SOPs, documentation, and training materials.</li>
-      </ul>
+      <div class="job-group">
+        <div class="group-label">POS platforms &amp; governance</div>
+        <ul class="job-bullets">
+          <li><strong>Own POS change control</strong> and business rules across 400+ registers and 200+ SQL servers, including a rule database of ~5,000 covering promotions, discounts, tenders, and store behaviors.</li>
+          <li>Implemented and maintain <strong>Oracle Xstore, Xcenter, and Xoffice</strong>; installed, tested, and certified a new POS system company-wide and worked on the Oracle 16 upgrade.</li>
+          <li>Lead configurator for <strong>SAP POS 2.3</strong> across multiple retail divisions (builds, testing, gold images, store upgrades); trained and certified on <strong>GK Software</strong> POS.</li>
+          <li>Work directly in Xstore's pricing internals (deal engine and customer-group triggers, manual discounts, hierarchical item pricing, coupons) to deliver wholesale, KYC-tier, and loyalty pricing Xstore doesn't support out of the box.</li>
+          <li>Run the POS lab: several Xstore lab registers for testing upgrades, researching new features, and proving changes before they reach stores.</li>
+        </ul>
+      </div>
+      <div class="job-group">
+        <div class="group-label">Applications &amp; development</div>
+        <ul class="job-bullets">
+          <li><strong>Architect of POS Plus Platform</strong>, a suite of 30+ custom applications running 24/7 across all retail locations.</li>
+          <li>Built and run <strong>Xstore Hub</strong>, an IIS portal unifying DFA's internal Xstore web apps with monitoring for every scheduled console job behind them.</li>
+          <li>Built ASP.NET applications for employee management (Xstore / Xoffice integration), <strong>A/R customer management with KYC</strong>, and store attributes (taxes, receipt header/footer), each producing flat files for store deployment.</li>
+          <li>Spec-driven <strong>AI-assisted development</strong>: research, lab proof, a written PLAN.md / CLAUDE.md, then the build with Claude Code in Visual Studio.</li>
+          <li>Developed a custom <strong>Magento</strong> admin interface on the Magento API with VB.NET, plus mobile app work in Ionic / Cordova and Xamarin.</li>
+          <li>Built <strong>BI dashboards and SSRS reports</strong> for real-time visibility into sales, exceptions, KPIs, and system health.</li>
+        </ul>
+      </div>
+      <div class="job-group">
+        <div class="group-label">Data &amp; integration</div>
+        <ul class="job-bullets">
+          <li><strong>Oracle 19c</strong> (SQL*Plus, SQL Developer, Toad) for schema research and scripted changes; <strong>SQL Server</strong> across 200+ store servers rolled out with custom views; Oracle and Magento database administration (backups, restores, indexing).</li>
+          <li>Maintain the ERP transformation and integration servers and correct transactions that fail on their way into Oracle Retail ReSA and SIM.</li>
+          <li>Keep data moving with scheduled tasks and <strong>MNT / DataLoader</strong> files, including an automated inventory movement system that collects and stages store inventory files every five minutes, built in native batch to meet a locked-down security policy.</li>
+        </ul>
+      </div>
+      <div class="job-group">
+        <div class="group-label">Payments, hardware &amp; rollouts</div>
+        <ul class="job-bullets">
+          <li>Delivered <strong>PCI compliance, EMV / contactless certification, merchant credit/debit testing, Dynamic Currency Conversion, and loyalty integration</strong>.</li>
+          <li>Tested and launched the first-generation <strong>tablet POS</strong> and peripherals, mobile sales, and a <strong>customer self-checkout</strong> that improved on the older POS.</li>
+          <li>Integrate and support <strong>Verifone pinpads</strong> (forms, MX Downloader), Zebra scanners (123Scan), NCR receipt printers, and mobile devices managed through SimpleMDM and Scalefusion.</li>
+          <li>Run the in-store <strong>digital signage</strong> network with <strong>Samsung MagicInfo</strong> and <strong>BrightSign</strong>, scheduling content and deploying media to store displays.</li>
+        </ul>
+      </div>
+      <div class="job-group">
+        <div class="group-label">Support, operations &amp; training</div>
+        <ul class="job-bullets">
+          <li>Primary <strong>Tier 2 escalation point</strong>: trace incidents through xstore.log, repl.log, replicationAudit.log, PosLog and EFTLink logs to separate store-side from Xcenter-side failures.</li>
+          <li>Prepare gold images, install and configure POS software, and script monitoring and maintenance for 400+ registers.</li>
+          <li>Windows administration: group policy, user and password management, and LAPS, coordinating Active Directory issues with the network team.</li>
+          <li>Work with vendors on issue resolution, upgrades, patches, hardware, and larger projects.</li>
+          <li>Store and corporate trainer; author SOPs, documentation, and Camtasia training videos for IT staff and store users.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="job reveal">
@@ -1316,174 +1324,152 @@
         <li>Produce graphics, product art, and promotional content with <strong>Adobe Photoshop / Illustrator</strong>, <strong>Canva</strong>, and <strong>Leonardo.ai</strong>.</li>
       </ul>
     </div>
+    <div class="job reveal">
+      <div class="job-header">
+        <div class="job-dates">Jan 2004 — Feb 2008</div>
+        <div class="job-title-block">
+          <div class="role">Assistant Manager</div>
+          <div class="org">Best Buy · Hialeah, FL</div>
+        </div>
+      </div>
+      <ul class="job-bullets">
+        <li>Ran daily store operations and customer experience in a high-volume retail environment.</li>
+        <li>Trained and coached staff, improving sales performance and operational consistency.</li>
+        <li>Managed inventory, merchandising, and customer escalations with a focus on service quality.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ==================== POS PLUS PLATFORM (DEEP DIVE) ==================== -->
+<!-- ==================== PLATFORMS (DEEP DIVE) ==================== -->
 <section class="platform-section" id="platform">
   <div class="container">
     <div class="section-head reveal">
       <div class="meta">
         <span class="section-num">§ 03</span>
-        <span class="section-label">Platform Deep Dive</span>
+        <span class="section-label">Platforms</span>
       </div>
-      <h2 class="display-lg">POS Plus Platform.</h2>
+      <h2 class="display-lg">Two platforms, two different problems.</h2>
     </div>
 
-    <div class="platform-intro">
-      <div class="narrative reveal">
-        <p>
-          POS Plus Platform is the suite of <strong>30+ custom in-store applications</strong> I architected and have maintained for years, running 24/7 across every Duty Free Americas retail location. It exists because off-the-shelf POS — even something as substantial as Oracle Xstore — can't anticipate every operational reality.
-        </p>
-        <p>
-          When the platform falls short of what stores actually need, I build the piece that closes the gap. Then I keep it running.
-        </p>
-        <p style="color: var(--gray); font-size: 15px;">
-          The result is a layered ecosystem that sits next to Xstore — extending its functionality, monitoring its health, automating its housekeeping, and giving store associates and IT the tools off-the-shelf software didn't ship with.
-        </p>
-      </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">30<span style="font-size: 0.45em;">+</span></div>
-        <div class="impact-label">Production applications running 24/7 across every retail location.</div>
-        <div class="impact-row">
-          <span class="k">Coverage</span>
-          <span class="v">All stores · 400+ registers</span>
+    <p class="lead reveal" style="max-width: 760px; margin-bottom: 64px;">
+      One lives on the registers and keeps 400+ lanes running. The other is the front door for the business users and support staff who manage what those registers do.
+    </p>
+
+    <!-- ---- Platform A: POS Plus ---- -->
+    <div class="platform-block">
+      <div class="platform-label reveal"><span class="pl-letter">A</span> In-store · Register level</div>
+      <div class="platform-intro">
+        <div class="narrative reveal">
+          <h3 class="platform-name">POS Plus Platform</h3>
+          <p>
+            A suite of <strong>30+ custom in-store applications</strong> I architected and maintain, running 24/7 across every retail location. It exists because off-the-shelf POS, even something as substantial as Oracle Xstore, can't anticipate every operational reality.
+          </p>
+          <p>
+            When the platform falls short of what stores actually need, I build the piece that closes the gap, then keep it running: monitoring, scheduled maintenance, register-level utilities, and the file-based integrations that move data between stores and central systems.
+          </p>
         </div>
-        <div class="impact-row">
-          <span class="k">Uptime</span>
-          <span class="v">24/7 production</span>
-        </div>
-        <div class="impact-row">
-          <span class="k">Stack</span>
-          <span class="v">.NET · C# / VB.NET · SQL Server</span>
-        </div>
-        <div class="impact-row">
-          <span class="k">Maintenance</span>
-          <span class="v">100% mine</span>
+        <div class="impact-card reveal">
+          <div class="impact-num">30<span style="font-size: 0.45em;">+</span></div>
+          <div class="impact-label">Production applications running 24/7 across every retail location.</div>
+          <div class="impact-row"><span class="k">Coverage</span><span class="v">All stores · 400+ registers</span></div>
+          <div class="impact-row"><span class="k">Uptime</span><span class="v">24/7 production</span></div>
+          <div class="impact-row"><span class="k">Stack</span><span class="v">.NET · VB.NET / C# · batch</span></div>
+          <div class="impact-row"><span class="k">Ownership</span><span class="v">Design through support</span></div>
         </div>
       </div>
     </div>
 
-    <div class="platform-cats reveal-stagger">
-      <div class="platform-card">
-        <div class="cat-num">⊹ 01</div>
-        <h4>Operational Monitoring</h4>
-        <p class="cat-desc">Continuous visibility into the health of registers, services, and back-of-house systems — catching issues before stores feel them.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          Register heartbeat · transaction-flow checks · service watchdogs
+    <!-- ---- Platform B: Xstore Hub ---- -->
+    <div class="platform-block">
+      <div class="platform-label reveal"><span class="pl-letter">B</span> Central · Web portal</div>
+      <div class="platform-intro">
+        <div class="narrative reveal">
+          <h3 class="platform-name">Xstore Hub</h3>
+          <p>
+            An <strong>IIS-hosted portal</strong> that brings all of DFA's internal Xstore web applications under one roof, with <strong>built-in monitoring for every scheduled console job</strong> behind them, from promotion publishers to inventory movement jobs.
+          </p>
+          <p>
+            Business users, authorizers, and the support desk get one place to manage employees, store data, promotions, and customer tiers without touching the database directly. IT gets one place to see whether the jobs that feed the stores actually ran.
+          </p>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-num">9</div>
+          <div class="impact-label">Internal Xstore applications built and running in production.</div>
+          <div class="impact-row"><span class="k">Hosting</span><span class="v">IIS · host-name bindings</span></div>
+          <div class="impact-row"><span class="k">Stack</span><span class="v">ASP.NET · .NET 8 → 10</span></div>
+          <div class="impact-row"><span class="k">Data</span><span class="v">Oracle 19c · SQL Server</span></div>
+          <div class="impact-row"><span class="k">Monitoring</span><span class="v">All scheduled console jobs</span></div>
         </div>
       </div>
-      <div class="platform-card">
-        <div class="cat-num">⊹ 02</div>
-        <h4>Maintenance Automation</h4>
-        <p class="cat-desc">Scheduled and on-demand routines that handle the unglamorous work that has to happen between transactions — every night, every day, every store.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          Log rotation · DB cleanup · cache sync · end-of-day jobs
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="cat-num">⊹ 03</div>
-        <h4>Register-Level Utilities</h4>
-        <p class="cat-desc">Tools store associates and managers use directly — small, focused, and built for the specific friction the standard POS interface leaves behind.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          Multi-host remote launcher (WMI / PsExec) · PowerShell network config · diagnostic launchers
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="cat-num">⊹ 04</div>
-        <h4>Data Integration</h4>
-        <p class="cat-desc">Connectors and pipelines that move transactional and reference data between Xstore, ERP (Retek Resa / SIM), and downstream systems — keeping data clean and synchronized.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          ERP transformation tools · flat-file deployers · reconciliation
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="cat-num">⊹ 05</div>
-        <h4>Configuration Management</h4>
-        <p class="cat-desc">Per-store and per-register configuration — taxes, parameters, business rules, receipt formatting — managed centrally and deployed reliably.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          DataLoader promo-file generator (prc_deal) · Xstore macro-script generator · store-attribute integration
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="cat-num">⊹ 06</div>
-        <h4>Reporting &amp; Visibility</h4>
-        <p class="cat-desc">Custom dashboards and reports — built where standard Xstore reporting doesn't cover the question leadership or operations actually need answered.</p>
-        <div class="examples">
-          <span class="ex-label">Example apps</span>
-          Exception reports · KPI dashboards · audit trails
-        </div>
+
+      <div class="hub-apps-label reveal">Applications delivered</div>
+      <div class="hub-apps reveal">
+        <div class="hub-item"><strong>Employee Management</strong><span>Employee records and access with Xstore / Xoffice integration</span></div>
+        <div class="hub-item"><strong>Store Info Management</strong><span>Per-store attributes, taxes, and receipt header and footer</span></div>
+        <div class="hub-item"><strong>Xstore Flight Exception</strong><span>Airport flight-data exception handling</span></div>
+        <div class="hub-item"><strong>KYC Tier Portal</strong><span>Imports KYC customer exports and assigns four pricing tiers via MNT</span></div>
+        <div class="hub-item"><strong>Discount Manager</strong><span>Manages Xstore manual discounts and wholesale pricing without direct DB work</span></div>
+        <div class="hub-item"><strong>Simple Promo App</strong><span>Promotion entry, authorizer approval, and auto-publish as MNT files every 15 minutes</span></div>
+        <div class="hub-item"><strong>PromoChecker</strong><span>Catches errors in DataLoader promotion and deal files before they reach stores</span></div>
+        <div class="hub-item"><strong>Coupon App</strong><span>Role-gated coupon creation and QR-redeemable serialized coupons with use limits</span></div>
+        <div class="hub-item"><strong>Support Desk Rota</strong><span>Support desk staff scheduling, rebuilt in ASP.NET</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SELECTED PROJECTS ==================== -->
+<!-- ==================== SELECTED WORK ==================== -->
 <section id="projects">
   <div class="container">
     <div class="section-head reveal">
       <div class="meta">
         <span class="section-num">§ 04</span>
-        <span class="section-label">Selected Projects</span>
+        <span class="section-label">Selected Work</span>
       </div>
-      <h2 class="display-lg">Other things I've shipped.</h2>
-    </div>
-
-    <div class="project-feature reveal">
-      <div class="meta-side">
-        <div class="label">Daily drivers</div>
-        <div class="number">5</div>
-        <div class="sub">Claude · Copilot · ChatGPT · Gemini · Ollama</div>
-      </div>
-      <div>
-        <h3>AI-Assisted Workflow Stack</h3>
-        <p>
-          A deliberate, production-grade workflow built around five AI tools — Claude and GitHub Copilot for code generation, ChatGPT and Gemini for analysis and documentation, and Ollama for local models when data can't leave the network. Recent tools shipped this way: a <strong>DataLoader promotion-file generator</strong> for Xstore's <em>prc_deal</em> tables, an <strong>Xstore macro-script generator</strong> with project-scoped templates, a <strong>multi-host remote program launcher</strong> for register administration (WMI / PsExec), and PowerShell tooling for register network configuration — plus documentation that writes itself alongside the work and shorter time-to-resolution on complex incidents.
-        </p>
-        <div class="tags">
-          <span>Code generation</span>
-          <span>Auto-documentation</span>
-          <span>Incident resolution</span>
-          <span>Local LLMs</span>
-        </div>
-      </div>
+      <h2 class="display-lg">How the work actually gets done.</h2>
     </div>
 
     <div class="project-grid reveal-stagger">
       <div class="project-card">
-        <div class="num">→ 01</div>
-        <h4>Employee Management System</h4>
-        <p>Full ASP.NET application for employee identity and access, integrated with Xstore and Xoffice. Produces formatted flat-file outputs for downstream store deployment.</p>
+        <div class="num">→ 01 · Incident analysis</div>
+        <h4>Production incident root-cause analysis</h4>
+        <p>Investigated a reported data discrepancy between a store and the central Xcenter environment. Analysis of Xstore application and replication logs confirmed every record had replicated successfully after transient connection retries, isolating the issue to the central system and routing remediation to the right team.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 02</div>
-        <h4>A/R Customer &amp; KYC System</h4>
-        <p>Accounts-receivable customer management with Know-Your-Customer workflows for Xstore. Centralized customer onboarding and compliance with formatted flat-file export.</p>
+        <div class="num">→ 02 · Pricing research</div>
+        <h4>Wholesale and KYC pricing in Xstore</h4>
+        <p>Xstore has no native wholesale feature, so I delivered one by combining three existing engines: hierarchical item pricing, the deal engine with customer-group triggers, and manual discounts. I also delivered four KYC customer pricing tiers driven by MNT group assignments instead of cashier buttons.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 03</div>
-        <h4>Store Attribute Integration</h4>
-        <p>Per-store configuration management — tax setup, receipt header/footer customization, and operational attributes — pushed to stores as deployable flat files.</p>
+        <div class="num">→ 03 · Deal engine</div>
+        <h4>Automatic loyalty deal</h4>
+        <p>Built a transaction-wide 10% loyalty deal with customer-group triggers across five loyalty tiers, replacing a cashier-applied discount so qualifying customers get the price automatically.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 04</div>
-        <h4>Hardware &amp; Payment Integration</h4>
-        <p>Integration and maintenance of Verifone pinpads (with MX downloader), Zebra scanners, and tablet POS hardware across the register fleet. EMV and contactless certifications delivered.</p>
+        <div class="num">→ 04 · Integration</div>
+        <h4>Inventory movement automation</h4>
+        <p>Built a scheduled integration that collects inventory movement files from every store every five minutes and stages them centrally for downstream processing, tagging each with store and timestamp and keeping daily audit logs with 30-day retention. Engineered in native Windows batch to meet a locked-down security policy.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 05</div>
-        <h4>BI Dashboards &amp; SSRS</h4>
-        <p>Custom BI dashboards and SQL Server Reporting Services reports surfacing real-time visibility into sales, exceptions, KPIs, and system health for operations and leadership.</p>
+        <div class="num">→ 05 · Method</div>
+        <h4>Research → lab → spec → build</h4>
+        <p>Every project follows the same loop: read the Xstore manuals and the live schema, prove the approach in a lab database, write a PLAN.md / CLAUDE.md specification, then hand the build to Claude Code inside Visual Studio.</p>
       </div>
       <div class="project-card">
-        <div class="num">→ 06</div>
-        <h4>Content Ops Toolkit</h4>
-        <p>Custom tools built for the e-commerce side venture: a Metricool-compatible CSV exporter for multi-platform video scheduling, a brand-voice social post generator across five platforms, and a Shopify-aware post generator.</p>
+        <div class="num">→ 06 · Enterprise rollouts</div>
+        <h4>Payments, compliance, and new lanes</h4>
+        <p>PCI compliance, EMV and contactless certifications, Dynamic Currency Conversion, loyalty integration, first-generation tablet POS, and customer self-checkout, plus Verifone pinpad and Zebra scanner integration across the fleet.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 07 · Multi-platform POS</div>
+        <h4>More than one POS platform</h4>
+        <p>Lead configurator for SAP POS 2.3 across multiple retail divisions: managing builds, testing every release, preparing gold images, and upgrading stores. Also trained and certified on GK Software POS, so I've run more than one platform end to end.</p>
+      </div>
+      <div class="project-card">
+        <div class="num">→ 08 · Digital signage &amp; web</div>
+        <h4>Store screens and the e-commerce back office</h4>
+        <p>Run the in-store signage network with Samsung MagicInfo and BrightSign, scheduling content and pushing media to store displays. Separately built a custom Magento admin interface on the Magento API with VB.NET to manage the e-commerce site.</p>
       </div>
     </div>
   </div>
@@ -1502,39 +1488,51 @@
     <div class="grid reveal-stagger">
       <div class="cap-block">
         <div class="cap-label">POS Platforms</div>
-        <div class="cap-items">Oracle Xstore · Xcenter · Xoffice</div>
+        <div class="cap-items">Oracle Xstore · Xcenter · Xoffice · Xcenter replication · RTLog broadcaster · SAP POS 2.3 · GK Software POS</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Xstore Internals</div>
+        <div class="cap-items">Deal pricing engine (prc_deal, customer-group triggers) · manual discounts (DSC_*) · hierarchical item pricing &amp; Best Deal · serialized coupons · customer affiliations · MNT / DataLoader</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">ERP / Retail Systems</div>
-        <div class="cap-items">Oracle Retek Resa · SIM · ERP transformation servers</div>
+        <div class="cap-items">Oracle Retail ReSA · SIM · RTLog · ERP transformation servers</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">Databases &amp; BI</div>
-        <div class="cap-items">SQL Server (T-SQL, schema design, stored procedures, performance tuning) · SSRS · custom dashboards · KPI &amp; exception reporting</div>
+        <div class="cap-items">Oracle 19c (SQL*Plus, SQL Developer) · SQL Server (T-SQL, schema design, stored procedures, tuning) · SSRS · KPI &amp; exception reporting</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">Development</div>
-        <div class="cap-items">.NET (C# / VB.NET) · ASP.NET · WinForms · PowerShell · Batch / VBScript · React · JavaScript</div>
+        <div class="cap-items">ASP.NET · .NET 8 → .NET 10 · VB.NET / C# · IIS hosting · console publisher services · Batch / cmd · PowerShell (DPAPI credentials) · React · JavaScript</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">Payment &amp; Compliance</div>
-        <div class="cap-items">Verifone pinpads · EMV / contactless · PCI · Zebra scanners · tablet POS</div>
+        <div class="cap-items">Verifone pinpads (forms, MX Downloader) · EMV / contactless · PCI · merchant credit/debit certification · Dynamic Currency Conversion</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Mobile &amp; Devices</div>
+        <div class="cap-items">Tablet POS · mobile sales · Ionic / Cordova · Xamarin · SimpleMDM · Scalefusion · Zebra scanners (123Scan) · NCR receipt printers</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">Digital Signage</div>
-        <div class="cap-items">Samsung MagicInfo · BrightSign</div>
+        <div class="cap-items">Samsung MagicInfo · BrightSign · content scheduling · media deployment to store displays</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">AI-Assisted Development</div>
-        <div class="cap-items">Claude · GitHub Copilot · ChatGPT · Gemini · Ollama (local models)</div>
+        <div class="cap-items">Claude Code in Visual Studio (spec-driven: PLAN.md / CLAUDE.md) · Claude · GitHub Copilot · ChatGPT · Gemini · Ollama</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">E-commerce &amp; Creative</div>
-        <div class="cap-items">Shopify (Horizon themes) · Printify · Adobe Photoshop &amp; Illustrator · Canva · Leonardo.ai</div>
+        <div class="cap-items">Magento (API integration) · Shopify (Horizon themes) · Etsy · eBay · Printify · Adobe Photoshop &amp; Illustrator · Canva · Leonardo.ai</div>
       </div>
       <div class="cap-block">
         <div class="cap-label">Systems / Remote Admin</div>
-        <div class="cap-items">Intel AMT · PsExec · WMI · WinRM · Group Policy</div>
+        <div class="cap-items">Intel AMT · PsExec · UltraVNC · WMI · WinRM · Group Policy · LAPS · Windows Scheduled Tasks</div>
+      </div>
+      <div class="cap-block">
+        <div class="cap-label">Tools &amp; Workflow</div>
+        <div class="cap-items">Visual Studio (2012 through current) · SQL Server Management Studio · Report Builder · Toad · Jira · Assembla · SAP Configurator · Camtasia · Microsoft Office · Google Workspace</div>
       </div>
     </div>
 
@@ -1553,74 +1551,11 @@
   </div>
 </section>
 
-<!-- ==================== CURRENTLY ==================== -->
-<section id="currently">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="meta">
-        <span class="section-num">§ 06</span>
-        <span class="section-label">Currently</span>
-      </div>
-      <h2 class="display-lg">What I'm into right now.</h2>
-    </div>
-    <div class="currently-grid reveal-stagger">
-      <div class="currently-card">
-        <div class="verb">Building</div>
-        <div class="what">AI-assisted internal tooling</div>
-        <div class="detail">Prototyping React-based generators that compress repetitive Xstore configuration work — DataLoader files, macro scripts, and store-deployment artifacts — from hours of manual work into minutes.</div>
-      </div>
-      <div class="currently-card">
-        <div class="verb">Exploring</div>
-        <div class="what">Local LLMs with Ollama</div>
-        <div class="detail">Running open-weight models locally for tasks where I don't want data leaving the network. Comparing throughput, quality, and where local models genuinely replace cloud APIs.</div>
-      </div>
-      <div class="currently-card">
-        <div class="verb">Sharpening</div>
-        <div class="what">Solutions architecture chops</div>
-        <div class="detail">Studying how the AI tooling layer reshapes traditional retail IT — from how POS systems should expose data to how teams should organize around model-assisted workflows.</div>
-      </div>
-    </div>
-    <span class="currently-stamp">Last updated · May 2026</span>
-  </div>
-</section>
-
-<!-- ==================== ELSEWHERE ==================== -->
-<section id="elsewhere">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="meta">
-        <span class="section-num">§ 07</span>
-        <span class="section-label">Elsewhere</span>
-      </div>
-      <h2 class="display-lg">Beyond the day job.</h2>
-    </div>
-    <div class="elsewhere reveal-stagger">
-      <a class="elsewhere-card" href="https://www.youtube.com/@littletechlab" target="_blank" rel="noopener">
-        <div class="label">YouTube</div>
-        <h4>Little Tech Lab</h4>
-        <p>Unscripted tech exploration covering AI, emerging technologies, and educational tutorials. Hands-on experimentation, plain-English explanations.</p>
-        <span class="link">Watch on YouTube <span class="arrow">→</span></span>
-      </a>
-      <a class="elsewhere-card" href="https://www.linkedin.com/in/hiram-sanchez" target="_blank" rel="noopener">
-        <div class="label">LinkedIn</div>
-        <h4>Professional Network</h4>
-        <p>Full work history, recommendations from teammates and stakeholders, and a place to start a conversation if you'd rather not email.</p>
-        <span class="link">Connect on LinkedIn <span class="arrow">→</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ==================== CONTACT ==================== -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="meta">
-        <span class="section-num">§ 08</span>
-        <span class="section-label">Get in Touch</span>
-      </div>
-      <h2>Let's <em>talk shop.</em></h2>
-    </div>
+    <span class="eyebrow reveal">§ 06 · Get in Touch</span>
+    <h2 class="reveal">Let's <em>talk shop.</em></h2>
     <p class="lead reveal">
       Open to senior IC and lead roles — POS systems, business systems analysis, solutions architecture, retail technology, or anywhere deep retail-stack knowledge meets AI-assisted engineering.
     </p>
@@ -1699,47 +1634,24 @@
     statIO.observe(el);
   });
 
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const label = () => { toggle.textContent = root.getAttribute('data-theme') === 'dark' ? '[ light ]' : '[ dark ]'; };
+  label();
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    if (next === 'dark') root.setAttribute('data-theme', 'dark'); else root.removeAttribute('data-theme');
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+
   // Nav border on scroll
   const nav = document.getElementById('topnav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 24) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   }, { passive: true });
-
-  // Mobile menu toggle
-  const navToggle = document.getElementById('navtoggle');
-  navToggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  });
-  // Close the panel after a section link is tapped
-  document.querySelectorAll('.mobile-menu a').forEach(a => {
-    a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open menu');
-    });
-  });
-
-  // Scroll-spy: highlight the nav link for the section in view
-  const spyTargets = ['about', 'experience', 'platform', 'projects', 'capabilities', 'contact']
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-  const allNavLinks = document.querySelectorAll('nav.topnav a[href^="#"]');
-  function setActive(id) {
-    allNavLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-    });
-  }
-  const spyIO = new IntersectionObserver((entries) => {
-    // pick the entry nearest the top band of the viewport
-    const visible = entries.filter(e => e.isIntersecting);
-    if (visible.length) {
-      setActive(visible[0].target.id);
-    }
-  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
-  spyTargets.forEach(sec => spyIO.observe(sec));
 </script>
 
 </body>
